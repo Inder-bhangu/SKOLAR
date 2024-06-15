@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header, nav, section, article, aside, footer {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav {
+            background-color: #333333;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        section {
+            display: flex;
+            justify-content: space-between;
+        }
+        article {
+            flex: 3;
+            margin-right: 10px;
+        }
+        aside {
+            flex: 1;
+            background-color: #f0f0f0;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>This is the header section where the website's title and introductory content are displayed. It provides an overview of what the site is about and sets the tone for the content.</p>
+    </header>
+
+    <nav>
+        <a href="#" id="homeLink">Home</a>
+        <a href="#" id="aboutLink">About</a>
+        <a href="#" id="servicesLink">Services</a>
+        <a href="#" id="contactLink">Contact</a>
+    </nav>
+
+    <section>
+        <article id="homeSection">
+            <h2>Home</h2>
+            <p>Welcome to our website! We are glad to have you here. Explore our content and learn more about what we have to offer.</p>
+        </article>
+        <article id="aboutSection" class="hidden">
+            <h2>About Our Company</h2>
+            <p>Our company has been at the forefront of innovation in the tech industry for over a decade. We specialize in developing cutting-edge software solutions that meet the needs of businesses and individuals worldwide. Our mission is to deliver high-quality products that enhance productivity and drive success.</p>
+            <p>We offer a wide range of services, including custom software development, mobile app development, and IT consulting. Our team of experienced professionals is dedicated to providing exceptional service and support to our clients.</p>
+            <h3>Our History</h3>
+            <p>Founded in 2010, our company started as a small startup with a big vision. Over the years, we have grown into a global organization with a diverse team of experts. Our commitment to innovation and excellence has earned us numerous awards and recognition in the industry.</p>
+            <p>As we continue to grow, we remain focused on our core values of integrity, customer satisfaction, and continuous improvement. We believe that our success is built on the success of our clients, and we strive to create lasting partnerships based on trust and mutual benefit.</p>
+        </article>
+        <article id="servicesSection" class="hidden">
+            <h2>Our Services</h2>
+            <p>We offer a variety of services to meet the needs of our clients:</p>
+            <ul>
+                <li>Custom Software Development</li>
+                <li>Mobile App Development</li>
+                <li>IT Consulting</li>
+                <li>Cloud Solutions</li>
+                <li>Technical Support</li>
+            </ul>
+            <p>Our experienced team works closely with clients to understand their requirements and deliver tailored solutions that drive success.</p>
+        </article>
+        <article id="contactSection" class="hidden">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our services, please don't hesitate to contact us.</p>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Main Street, Anytown, USA</p>
+        </article>
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="#news">Latest News</a></li>
+                <li><a href="#blog">Our Blog</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved. | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // JavaScript to handle navigation
+        document.getElementById('homeLink').addEventListener('click', function() {
+            showSection('homeSection');
+        });
+        document.getElementById('aboutLink').addEventListener('click', function() {
+            showSection('aboutSection');
+        });
+        document.getElementById('servicesLink').addEventListener('click', function() {
+            showSection('servicesSection');
+        });
+        document.getElementById('contactLink').addEventListener('click', function() {
+            showSection('contactSection');
+        });
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('homeSection').classList.add('hidden');
+            document.getElementById('aboutSection').classList.add('hidden');
+            document.getElementById('servicesSection').classList.add('hidden');
+            document.getElementById('contactSection').classList.add('hidden');
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

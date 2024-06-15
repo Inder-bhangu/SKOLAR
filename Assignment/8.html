@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+</head>
+<body>
+	<h1>Sample Form</h1>
+	<form>
+		<!-- Text input for user's name -->
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<!-- Radio buttons for selecting gender -->
+		<p>Gender:</p>
+		<label for="male">Male</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="female">Female</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="other">Other</label>
+		<input type="radio" id="other" name="gender" value="other">
+<br>
+<br>
+		<!-- Dropdown menu for selecting country -->
+		<label for="country">Country:</label>
+		<select id="country" name="country">
+			<option value="">Select a country</option>
+			<option value="USA">United States</option>
+			<option value="Canada">Canada</option>
+			<option value="UK">United Kingdom</option>
+			<option value="Australia">Australia</option>
+			<option value="Other">Other</option>
+		</select>
+<br>
+<br>
+<p> after completion of the form click on the Submit button</p>
+		<!-- Submit button -->
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
